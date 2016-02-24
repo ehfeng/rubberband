@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1>Create Site</h1>
+<form method="POST" action="">
+	{{ form.csrf_token }}
+	{{ form.slug.label }} {{ form.slug() }}
+	{{ form.url.label }} {{ form.url() }}
+	<input type=submit></input>
+</form>
+{% endblock %}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rubberband</title>
+</head>
+<body>
+<h1>Rubberband</h1>
+<em>I've got an elastic heart.</em>
+<p>Rubberband a simple search service for generated static sites.</p>
+
+{% if current_user.is_authenticated %}
+
+<div>{{ current_user.display_name }}</div>
+<div><a href="{{ url_for('logout') }}">Logout</a></div>
+
+{% else %}
+
+<div><a href="{{ url_for('login') }}">Login</a></div>
+
+{% endif %}
+
+</body>
+</html>

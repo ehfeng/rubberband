@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1>Add domain to {{ site.slug }}</h1>
+<form method="POST" action="">
+	{{ form.csrf_token }}
+	{{ form.url.label }} {{ form.url() }}
+	<input type=submit></input>
+</form>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block body %}
+
+{% for page in pages %}
+<div>{{ page.primary_domain.url }}{{ page.path }}</div>
+<div>{{ page.body }}</div>
+<br>
+{% endfor %}
+
+{% endblock %}

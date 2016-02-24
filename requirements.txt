@@ -1,0 +1,14 @@
+beautifulsoup4
+elasticsearch-dsl
+elasticsearch-watcher
+flask
+flask-cors
+flask-login
+flask-sqlalchemy
+Flask-WTF
+google-api-python-client
+markdown
+psycopg2
+raven
+requests
+sqlalchemy

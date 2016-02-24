@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<a href="{{ url_for('create_site') }}">Create a new site</a>
+<br>
+{% for site in current_user.sites %}
+	<h1>Site: {{ site.slug }}</h1>
+	<div>Secret: {{ site.secret }}</div>
+	<h3>Domains</h3>
+	<a href="{{ url_for('add_domain', slug=site.slug) }}">Add domain</a>
+	<br><br>
+	{% for domain in site.domains %}
+		<div>{{ domain.url }}</div>
+		<form method="POST" action="{{ url_for('remove_domain', domain_id=domain.id) }}">
+			<input value="delete" type="submit" />
+		</form>
+	{% endfor %}
+	<br>
+{% endfor %}
+</body>
+</html>
