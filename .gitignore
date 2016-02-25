@@ -2,3 +2,4 @@
 .DS_Store
 rubberband.conf
 node_modules
+rubberband/static/build
